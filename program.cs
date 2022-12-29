@@ -6,8 +6,8 @@ builder.Services.AddControllers();
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
-builder.services.AddDbContext<VehicleQuotesContext>(options =>
-       options.UseNpgsql(Configuration.GetConnectionString("ReservationsContext"))  );
+builder.services.AddDbContext<ReservationDBContext>(options =>
+       options.UseNpgsql(Configuration.GetConnectionString("ReservationContext"))  );
 }
 
 var app = builder.Build();
